@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Names from './Names';
+import { CustomHeading } from './StyledComponents';
 
 function App() {
 	// Try to think through what state you'll need for this app before starting. Then build out
@@ -24,7 +25,9 @@ function App() {
 
 	return (
 		<div className="App">
-			{names.map((name) => <Names name={name.name} height={name.height} mass={name.mass} />)}
+			<CustomHeading>
+				{names.map((name) => <Names name={name.name} height={name.height} mass={name.mass} />)}
+			</CustomHeading>
 		</div>
 	);
 }
