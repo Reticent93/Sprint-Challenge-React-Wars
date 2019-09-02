@@ -22,7 +22,11 @@ function App() {
 			.catch((err) => console.log(err));
 	}, []);
 
-	return <div className="App">{names.map((name) => <Names name={name.name} key={name.name} />)}</div>;
+	return (
+		<div className="App">
+			{names.map((name) => <Names name={name.name} height={name.height} mass={name.mass} />)}
+		</div>
+	);
 }
 
 export default App;

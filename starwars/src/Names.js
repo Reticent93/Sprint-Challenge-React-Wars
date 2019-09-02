@@ -1,7 +1,14 @@
 import React from 'react';
+import { H1, H2 } from './StyledComponents';
 
-const Names = ({ name }) => {
-	console.log(name);
-	return <div>{name}</div>;
+const Names = ({ name, height, mass }) => {
+	console.log('heading', name, height);
+	return (
+		<React.Fragment>
+			<H1>{name}</H1>
+			<H2>{height}</H2>
+			<H2>{mass}</H2>
+		</React.Fragment>
+	);
 };
 export default Names;
